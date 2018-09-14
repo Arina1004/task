@@ -1,7 +1,9 @@
 module PasswordGenerator
 
-  def initialize(length,num=0)
+  def initialize(length, num=0)
+    #password length
     @length_pass=length
+    #number of digits in the password
     @num=num
   end
   
