@@ -5,6 +5,9 @@ def initialize(length, num = 0)
   @length_pass = length
   # Number of digits in the password
   @num = num
+  @vowels = ["a","e","i","y","o","u"]
+  @consonants = ["b","c","d","f","g","h","j","k","l","m","n",
+  "p","q","r","s","t","v","x","w","z"]
 end  
 
 def password
@@ -14,14 +17,11 @@ end
 private
  
 def generate_vowels
-  vowels = ['a' , 'e' , 'i' , 'y' , 'o' , 'u']
-  vowels[rand(vowels.length)]
+  @vowels[rand(@vowels.size)]
 end
 
 def generate_consonants
-  consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm',
-   'n', 'p', 'q', 'r', 's', 't', 'v', 'x', 'w', 'z']
-  consonants[rand(consonants.length)]
+ @consonants[rand(@consonants.size)]
 end
 
 def generate_number
@@ -44,4 +44,4 @@ def generate
   end
   return password
 end
-
+end
