@@ -1,13 +1,14 @@
 module PasswordGenerator
 
+VOWELS = ["a","e","i","y","o","u"]
+CONSONANTS = ["b","c","d","f","g","h","j","k","l","m","n",
+  "p","q","r","s","t","v","x","w","z"]
+
 def initialize(length, num = 0)
   # Password length
   @length_pass = length
   # Number of digits in the password
   @num = num
-  @vowels = ["a","e","i","y","o","u"]
-  @consonants = ["b","c","d","f","g","h","j","k","l","m","n",
-  "p","q","r","s","t","v","x","w","z"]
 end  
 
 def password
@@ -17,11 +18,11 @@ end
 private
  
 def generate_vowels
-  @vowels[rand(@vowels.size)]
+ VOWELS[rand(VOWELS.size)]
 end
 
 def generate_consonants
- @consonants[rand(@consonants.size)]
+ CONSONANTS[rand(CONSONANTS.size)]
 end
 
 def generate_number
